@@ -13,13 +13,13 @@ const { titulo, texto, link } = Astro.props;
     <slot />
   </div>
   <div>
-    <h1 class="text-2xl font-semibold text-[#202734] font-main">
+    <h1 class="text-2xl font-semibold text-[#022b54] font-main">
       {titulo}
     </h1>
-    <p class="text-justify my-2">{texto}</p>
+    <p class="text-justify text-[#3e4947] my-2">{texto}</p>
     <a
       href={link}
-      class="text-[#6db2b2] hover:text-[#006868] font-bold mt-2 transform duration-500 ease-in font-main"
+      class="text-[#3e4947] hover:text-[#022b54] underline font-bold mt-2 transform duration-500 ease-in font-main"
       >Saiba Mais</a
     >
   </div>
