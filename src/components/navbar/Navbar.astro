@@ -1,24 +1,27 @@
 <nav
-  class="flex gap-2 justify-evenly items-center py-8 px-2 text-[#fffffe] font-semibold font-main"
+  id="navbar"
+  class="flex gap-2 justify-evenly items-center py-8 px-2 text-[#fffffe] w-full font-semibold font-main navbar_stick z-40"
 >
   <div class="">
     <h1
       class="text-3xl md:text-4xl hover:text-[#0ab7b3] transform duration-500 ease-in"
     >
-      <a href="#">Surfar</a>
+      <a href="#home">Surfar</a>
     </h1>
   </div>
   <div class="flex gap-4 md:text-xl">
-    <a href="#" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
+    <a href="#home" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
       >Home</a
     >
-    <a href="#" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
-      >Destaque</a
+    <a
+      href="#destaque"
+      class="hover:text-[#0ab7b3] transform duration-500 ease-in">Destaque</a
     >
-    <a href="#" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
-      >Doação</a
+    <a
+      href="#doacao"
+      class="hover:text-[#0ab7b3] transform duration-500 ease-in">Doação</a
     >
-    <a href="#" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
+    <a href="#sobre" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
       >Sobre</a
     >
   </div>
@@ -29,4 +32,26 @@
   .font-main {
     font-family: "Lobster Two", cursive;
   }
+
+  .navbar_stick {
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+  }
+
+  .navbar_color {
+    background: #022b549f;
+    transition: background 700ms;
+  }
 </style>
+
+<script lang="js">
+  var mynav = document.getElementById("navbar");
+  window.onscroll = function () {
+    console.log("scrolltop=> ", document.documentElement.scrollTop);
+    if (window.scrollY > 770) {
+      mynav.classList.add("navbar_color");
+    } else {
+      mynav.classList.remove("navbar_color");
+    }
+  };
+</script>
