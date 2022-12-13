@@ -3,11 +3,17 @@
   class="flex gap-2 justify-evenly items-center py-8 px-2 text-[#fffffe] w-full font-semibold font-main navbar_stick z-40"
 >
   <div class="">
-    <h1
+    <a
+      href="#home"
       class="text-3xl md:text-4xl hover:text-[#0ab7b3] transform duration-500 ease-in"
     >
-      <a href="#home">Surfar</a>
-    </h1>
+      <img
+        src="/surfarLogo.svg"
+        alt="projeto surfar logo"
+        class="w-32 transform duration-700 ease-in-out"
+        id="logonavbar"
+      />
+    </a>
   </div>
   <div class="flex gap-4 md:text-xl">
     <a href="#home" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
@@ -20,6 +26,10 @@
     <a
       href="#doacao"
       class="hover:text-[#0ab7b3] transform duration-500 ease-in">Doação</a
+    >
+    <a
+      href="#contato"
+      class="hover:text-[#0ab7b3] transform duration-500 ease-in">Contato</a
     >
     <a href="#sobre" class="hover:text-[#0ab7b3] transform duration-500 ease-in"
       >Sobre</a
@@ -42,16 +52,24 @@
     background: #022b549f;
     transition: background 700ms;
   }
+
+  .remove_logo {
+    width: 5rem;
+  }
 </style>
 
 <script lang="js">
   var mynav = document.getElementById("navbar");
+  var logonav = document.getElementById("logonavbar");
   window.onscroll = function () {
     console.log("scrolltop=> ", document.documentElement.scrollTop);
     if (window.scrollY > 770) {
       mynav.classList.add("navbar_color");
+      logonav.classList.add("remove_logo");
     } else {
       mynav.classList.remove("navbar_color");
+
+      logonav.classList.remove("remove_logo");
     }
   };
 </script>

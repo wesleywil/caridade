@@ -1,0 +1,110 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+  class="bg-[#022b54] text-[#fffffe] flex flex-col items-center p-8 w-full"
+  id="contato"
+>
+  <h1 class="text-4xl text-center uppercase font-bold font-main">Contato</h1>
+  <div class="flex flex-col gap-2 mt-8 text-2xl">
+    <div class="flex flex-col gap-2 items-center">
+      <div class="w-12 h-12 whats">
+        <Icon pack="mdi" name="whatsapp" />
+      </div>
+      <span class="self-center">(13) 92000-2397</span>
+    </div>
+    <div class="flex flex-col gap-2 items-center">
+      <div class="w-12 h-12 email">
+        <Icon pack="mdi" name="email" />
+      </div>
+      <span class="self-center">hiegogomesoficial@gmail.com</span>
+    </div>
+    <a
+      href="https://www.instagram.com/hiegosurfar/"
+      target="_blank"
+      class="flex flex-col gap-2 items-center"
+    >
+      <div class="w-12 h-12 insta">
+        <Icon pack="mdi" name="instagram" />
+      </div>
+      <span class="self-center">@hiegosurfar</span>
+    </a>
+    <a
+      href="https://www.facebook.com/hiego.gomes.7"
+      target="_blank"
+      class="flex flex-col gap-2 items-center"
+    >
+      <div class="w-12 h-12 face">
+        <Icon pack="mdi" name="facebook" />
+      </div>
+      <span class="self-center">@hiegogomes</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .whats:hover {
+    animation: whats_animation 6s ease-in-out infinite;
+  }
+  .email:hover {
+    animation: email_animation 6s ease-in-out infinite;
+  }
+  .insta:hover {
+    animation: insta_animation 6s ease-in-out infinite;
+  }
+
+  .face:hover {
+    animation: face_animation 6s ease-in-out infinite;
+  }
+
+  @keyframes insta_animation {
+    0% {
+      color: #9135cf;
+    }
+    50% {
+      color: #da6fda;
+    }
+    75% {
+      color: #ffbb00;
+    }
+    100% {
+      color: #9135cf;
+    }
+  }
+
+  @keyframes face_animation {
+    0% {
+      color: #0084ff;
+    }
+    50% {
+      color: #fffffe;
+    }
+    100% {
+      color: #0084ff;
+    }
+  }
+  @keyframes whats_animation {
+    0% {
+      color: #79ff74;
+    }
+    50% {
+      color: #fffffe;
+    }
+    100% {
+      color: #79ff74;
+    }
+  }
+
+  @keyframes email_animation {
+    0% {
+      color: pink;
+    }
+    50% {
+      color: #fffffe;
+    }
+    100% {
+      color: pink;
+    }
+  }
+</style>
